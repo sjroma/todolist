@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>{{ title }}</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<style>
+	</style>
+</head>
+
+<body>
+	<h1></h1>
+	<div class="container">
+		<form class="form_container" id="todolist" action="/" method="post">
+			<input type="text" name="task" placeholder="Add a todo..." />
+			<input type="submit" id="submit_button" value="Add todo">
+		</form>
+		{{#errors.0}}
+    <ul>
+      {{#errors}}
+      <li>{{msg}}</li>
+      {{/errors}}
+    </ul>
+  {{/errors.0}}
+	</div>
+	<h3>Completed tasks</h3>
+</body>
+
+</html>
